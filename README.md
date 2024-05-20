@@ -182,3 +182,5 @@ Multimodal RAG (Randomized Automatic Differentiation Guard) is a technique for l
 - LanceDB: A database for multimodal retrieval.
 - Weviate: A database for multimodal retrieval.
   These approaches aim to enable LLMs to effectively process and integrate information from multiple sources, such as text, images, and databases, to generate more comprehensive and accurate outputs.
+
+---
