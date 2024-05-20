@@ -1,5 +1,7 @@
 # multimodalRAG
 
+knowledge base: anyform of db
+
 ## What is RAG?
 
 RAG is process of optimizing the output of a LLM. RAG process reerences a knowledge base outside of its training data sources before generating a response.
@@ -81,3 +83,102 @@ You're absolutely right! Your understanding of multimodal RAG is on point. Here'
 **Analogy:** Imagine writing a report about a historical event. Traditionally, you might rely on text sources like books or articles. With Multimodal RAG, you could also analyze historical photographs, maps, and even audio recordings of speeches to generate a more comprehensive and engaging report.
 
 Overall, Multimodal RAG is a powerful technique for unlocking the potential of LLMs by allowing them to leverage information from various data sources, leading to richer, more informative, and contextually-aware outputs.
+
+1. Multimodal LLM
+
+   1. GPT4V
+   2. Llava
+   3. FUYU
+
+2. Multimodal embedding
+
+   models(imagebind, Flumingo)
+
+   can process both
+   images and text
+
+   1. CLIP,
+   2. Llava
+   3. Gemini pro vision
+   4. chatgpt4
+
+3. multimodal retrieval
+
+includes DBs
+
+    1. lanceDB
+    2. weviate
+
+## Different approaches to solve multimodal RAG
+
+---
+
+Your understanding of Multimodal RAG and its components is excellent! Here's a breakdown of the different approaches to solve Multimodal RAG, incorporating your insights:
+
+**Multimodal LLMs:**
+
+You've listed some potential contenders for Multimodal LLMs, but it's important to note that this area is under active development. Here are some considerations:
+
+- **GPT-4V:** While there have been rumors about a potential multimodal version of GPT-4, there's no official confirmation from OpenAI yet.
+- **LLaVA:** This is a promising candidate from Google AI, trained on a massive dataset of text and code, demonstrating some multimodal capabilities.
+- **FUYU:** This model from BAAI (Beijing Academy of Artificial Intelligence) is another contender, though information is limited.
+
+**Multimodal Embeddings:**
+
+- **Image-Text Embeddings:** You've correctly identified CLIP (Contrastive Language-Image Pre-training) as a popular choice for encoding both images and text into a shared vector space. Here are some additional options:
+  - **FLAVA (Facebook Large-scale Audio-Visual Model):** Processes audio and visual data jointly.
+
+**Multimodal Retrieval:**
+
+You've mentioned some potential databases (lanceDB, weviate) that could be used for multimodal retrieval. Here's how retrieval approaches can differ:
+
+1. **Embed All Modalities into the Same Vector Space (CLIP approach):**
+
+   - Advantages: Simpler implementation, efficient retrieval using vector similarity search.
+   - Disadvantages: Requires good quality embeddings for all modalities, might not capture complex relationships between modalities.
+
+2. **Ground All Modalities into One Primary Modality (e.g., Text):**
+
+   - Advantages: Leverages existing text retrieval techniques.
+   - Disadvantages: Might lose information from non-text modalities during grounding.
+
+3. **Separate Stores for Different Modalities (Rank-rerank Approach):**
+   - Advantages: More flexibility in handling different modalities, potentially better preservation of information.
+   - Disadvantages: More complex architecture, requires a mechanism (like rank-reranking) to combine results from different modalities.
+
+**Additional Considerations:**
+
+- **Focus on Integration:** The key challenge is effectively integrating retrieved information from different modalities to inform the LLM's generation process. This might involve attention mechanisms or specialized architectures.
+- **Scalability:** Handling large volumes of multimodal data and ensuring efficient retrieval requires careful consideration of techniques and infrastructure.
+
+**Overall, tackling Multimodal RAG involves:**
+
+1. **Choosing a Multimodal LLM or training your own.**
+2. **Selecting a suitable embedding model to represent different modalities in a common space.**
+3. **Implementing a retrieval strategy to find relevant information based on the query.**
+4. **Developing an integration mechanism for the LLM to leverage retrieved multimodal context during generation.**
+
+## The field of Multimodal RAG is rapidly evolving, and these approaches are being actively researched and refined. As more research unfolds, we can expect even more powerful techniques to emerge!
+
+Multimodal RAG (Randomized Automatic Differentiation Guard) is a technique for leveraging information from various data sources, such as text, images, and databases, to generate richer and more informative outputs from Large Language Models (LLMs). Here are the different approaches to solve multimodal RAG:
+
+1. Multimodal LLMs:
+
+- GPT4V: A multimodal extension of GPT-4, capable of processing visual inputs.
+- Llava: A multimodal LLM that can process text, images, and other media.
+- FUYU: A multimodal LLM that can generate images and text.
+
+2. Multimodal Embedding Models:
+
+- ImageBind: A model that can process both images and text.
+- Flumingo: A multimodal embedding model that can process images and text.
+- CLIP (Contrastive Language-Image Pre-training): A model that can process images and text.
+- Llava: Also a multimodal embedding model.
+- Gemini Pro Vision: A multimodal embedding model.
+- ChatGPT4: A multimodal LLM that can process text and images.
+
+3. Multimodal Retrieval:
+
+- LanceDB: A database for multimodal retrieval.
+- Weviate: A database for multimodal retrieval.
+  These approaches aim to enable LLMs to effectively process and integrate information from multiple sources, such as text, images, and databases, to generate more comprehensive and accurate outputs.
