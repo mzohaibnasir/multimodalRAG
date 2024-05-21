@@ -158,8 +158,6 @@ You've mentioned some potential databases (lanceDB, weviate) that could be used 
 3. **Implementing a retrieval strategy to find relevant information based on the query.**
 4. **Developing an integration mechanism for the LLM to leverage retrieved multimodal context during generation.**
 
-## The field of Multimodal RAG is rapidly evolving, and these approaches are being actively researched and refined. As more research unfolds, we can expect even more powerful techniques to emerge!
-
 Multimodal RAG (Randomized Automatic Differentiation Guard) is a technique for leveraging information from various data sources, such as text, images, and databases, to generate richer and more informative outputs from Large Language Models (LLMs). Here are the different approaches to solve multimodal RAG:
 
 1. Multimodal LLMs:
